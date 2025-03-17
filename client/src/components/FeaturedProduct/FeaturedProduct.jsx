@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
 import { PiEyeLight } from "react-icons/pi";
 import { LuArrowRightLeft } from "react-icons/lu";
-import FeaturedProductData from "../../constants/FeaturedProduct";
+import {FeaturedProductData} from "../../constants/FeaturedProduct";
 
 const FeaturedProduct = () => {
   const [hoverToShowProdIcon, setHoverToShowProdIcon] = useState(null);
@@ -38,6 +38,18 @@ const FeaturedProduct = () => {
                 className="object-cover [@media(max-width:990px)]:w-full"
                 alt="box1"
               />
+              {feature.sale && (
+                <div className="">
+                  <div className={`saveHot flex items-center justify-center bg-green-500 absolute top-[11px] font-semibold p-2 left-0k rotate-90 text-white rounded-r-full w-[50px] h-[25px] ${feature.hot ? "left-10" : "left-0"}`}>
+                    SALE
+                  </div>
+                </div>
+              )}
+              {feature.hot && (
+                <div className="saveHot flex items-center justify-center bg-orange-500 absolute top-[11px] font-semibold p-2 left-0 rotate-90 text-white rounded-r-full w-[50px] h-[25px]">
+                  HOT
+                </div>
+              )}
               <div
                 className={`hover absolute left-0 flex items-center justify-between text-2xl space-x-2 w-full border border-gray-300 rounded-full ${
                   hoverToShowProdIcon === index ? "bottom-5" : "-bottom-full"

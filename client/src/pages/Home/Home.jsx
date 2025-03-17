@@ -6,6 +6,7 @@ import FeaturedProduct from "../../components/FeaturedProduct/FeaturedProduct";
 import AfterFeaturedProd from "../../components/AfterFeaturedProd/AfterFeaturedProd";
 import ImageSection from "../../components/ImageSection/ImageSection";
 import DailyDeal from "../../components/DailyDeal/DailyDeal";
+import AfterDailyDeal from "../../components/AfterDailyDeal/AfterDailyDeal";
 
 const Home = () => {
   return (
@@ -28,6 +29,9 @@ const Home = () => {
         </div>
         <div className="dailyDeal">
           <DailyDeal />
+        </div>
+        <div>
+          <AfterDailyDeal />
         </div>
       </div>
     </>

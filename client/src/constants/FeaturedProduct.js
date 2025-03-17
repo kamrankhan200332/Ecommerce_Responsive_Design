@@ -14,12 +14,14 @@ const FeaturedProductData = [
     img: img2,
     brand: "Sit Volumptatem",
     price: "68.00$",
-    save: true
+    sale: true,
+    hot: true,
   },
   {
     img: img3,
     brand: "Neque Porro Quisquamest",
     price: "68.00$",
+    hot: true,
   },
   {
     img: img4,
@@ -40,6 +42,7 @@ const FeaturedProductData = [
     img: img7,
     brand: "Sint Incidunt Utlabore",
     price: "68.00$",
+    sale: true,
   },
   {
     img: img8,
@@ -50,6 +53,7 @@ const FeaturedProductData = [
     img: img9,
     brand: "Neque Porro Quisquam",
     price: "68.00$",
+    hot: true,
   },
   {
     img: img10,
@@ -60,7 +64,15 @@ const FeaturedProductData = [
     img: img11,
     brand: "Aliquam Quaerat Voluptatem",
     price: "68.00$",
+    sale: true,
+    hot: true,
   },
 ];
 
-export default FeaturedProductData;
+const featureImages = [
+  {
+    img: img10,
+  }
+]
+
+export default { FeaturedProductData, featureImages };
