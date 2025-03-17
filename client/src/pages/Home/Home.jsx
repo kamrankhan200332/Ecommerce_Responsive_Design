@@ -7,6 +7,7 @@ import AfterFeaturedProd from "../../components/AfterFeaturedProd/AfterFeaturedP
 import ImageSection from "../../components/ImageSection/ImageSection";
 import DailyDeal from "../../components/DailyDeal/DailyDeal";
 import AfterDailyDeal from "../../components/AfterDailyDeal/AfterDailyDeal";
+import NewsLetter from "../../components/NewsLetter/NewsLetter";
 
 const Home = () => {
   return (
@@ -32,6 +33,9 @@ const Home = () => {
         </div>
         <div>
           <AfterDailyDeal />
+        </div>
+        <div>
+          <NewsLetter />
         </div>
       </div>
     </>
