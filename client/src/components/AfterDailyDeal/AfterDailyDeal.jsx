@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-import {FeaturedProductData} from "../../constants/FeaturedProduct";
+import { featureImages } from "../../constants/FeaturedProduct";
 
 const AfterDailyDeal = () => {
   return (
@@ -26,12 +26,12 @@ const AfterDailyDeal = () => {
         modules={[Autoplay]}
         className="mySwiper"
       >
-        {FeaturedProductData.map((feature, index) => (
+        {featureImages.map((feature, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full relative overflow-hidden rounded-lg">
+            <div className="w-full h-[200px]k relative overflow-hidden rounded-lg">
               <img
                 src={feature.img}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-[100px] object-contain rounded-lg"
                 alt="Product"
               />
             </div>
@@ -43,4 +43,3 @@ const AfterDailyDeal = () => {
 };
 
 export default AfterDailyDeal;
-

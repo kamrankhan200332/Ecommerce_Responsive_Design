@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
 import { PiEyeLight } from "react-icons/pi";
 import { LuArrowRightLeft } from "react-icons/lu";
-import {FeaturedProductData} from "../../constants/FeaturedProduct";
+import FeaturedProductData from "../../constants/FeaturedProduct";
 
 const FeaturedProduct = () => {
   const [hoverToShowProdIcon, setHoverToShowProdIcon] = useState(null);

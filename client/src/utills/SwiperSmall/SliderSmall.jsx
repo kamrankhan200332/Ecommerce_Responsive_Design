@@ -6,7 +6,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { CiHeart } from "react-icons/ci";
 import { PiShoppingCartThin, PiEyeLight } from "react-icons/pi";
 import { LuArrowRightLeft } from "react-icons/lu";
-import {FeaturedProductData} from "../../constants/FeaturedProduct";
+import FeaturedProductData from "../../constants/FeaturedProduct";
 
 const SliderSmall = () => {
   const [hoverToShowProdIcon, setHoverToShowProdIcon] = useState(null);

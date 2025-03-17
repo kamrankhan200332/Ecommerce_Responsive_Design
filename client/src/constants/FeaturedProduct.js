@@ -9,6 +9,13 @@ import img9 from "../assets/images/img09.jpg";
 import img10 from "../assets/images/img10.jpg";
 import img11 from "../assets/images/img11.jpg";
 
+import image1 from "../assets/images/p-logo1.png";
+import image2 from "../assets/images/p-logo2.png";
+import image3 from "../assets/images/p-logo3.png";
+import image4 from "../assets/images/p-logo4.png";
+import image5 from "../assets/images/p-logo5.png";
+import image6 from "../assets/images/p-logo6.png";
+
 const FeaturedProductData = [
   {
     img: img2,
@@ -69,10 +76,13 @@ const FeaturedProductData = [
   },
 ];
 
-const featureImages = [
-  {
-    img: img10,
-  }
-]
+export const featureImages = [
+  { img: image1 },
+  { img: image2 },
+  { img: image3 },
+  { img: image4 },
+  { img: image5 },
+  { img: image6 },
+];
 
-export default { FeaturedProductData, featureImages };
+export default FeaturedProductData;
