@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
@@ -10,7 +10,8 @@ import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [navLinks, setNavLinks] = useState("/");
+  // const [navLinks, setNavLinks] = useState("/");
+  const location = useLocation();
 
   return (
     <div>
@@ -31,11 +32,11 @@ const Navbar = () => {
                 <Link
                   to={"/"}
                   className={`hover:text-green-700 duration-200 ${
-                    navLinks === "/" && "text-green-800"
+                    location.pathname === "/" &&
+                    "text-white hover:text-white rounded  py-1  px-2 bg-green-800 "
                   }`}
                   onClick={() => {
                     setOpenMenu(false);
-                    setNavLinks("/");
                   }}
                 >
                   Home
@@ -45,11 +46,11 @@ const Navbar = () => {
                 <Link
                   to={"/store"}
                   className={`hover:text-green-700 duration-200 ${
-                    navLinks === "/store" && "text-green-800"
+                    location.pathname === "/store" &&
+                    "text-white hover:text-white  rounded  py-1  px-2 bg-green-800"
                   }`}
                   onClick={() => {
                     setOpenMenu(false);
-                    setNavLinks("/store");
                   }}
                 >
                   Store
@@ -59,11 +60,11 @@ const Navbar = () => {
                 <Link
                   to={"/about"}
                   className={`hover:text-green-700 duration-200 ${
-                    navLinks === "/about" && "text-green-800"
+                    location.pathname === "/about" &&
+                    "text-white hover:text-white  rounded  py-1  px-2 bg-green-800"
                   }`}
                   onClick={() => {
                     setOpenMenu(false);
-                    setNavLinks("/about");
                   }}
                 >
                   About
@@ -74,11 +75,11 @@ const Navbar = () => {
                 <Link
                   to={"/blog"}
                   className={`hover:text-green-700 duration-200 ${
-                    navLinks === "/blog" && "text-green-800"
+                    location.pathname === "/blog" &&
+                    "text-white hover:text-white  rounded  py-1  px-2 bg-green-800"
                   }`}
                   onClick={() => {
                     setOpenMenu(false);
-                    setNavLinks("/blog");
                   }}
                 >
                   Blog
@@ -88,11 +89,11 @@ const Navbar = () => {
                 <Link
                   to={"/page"}
                   className={`hover:text-green-700 duration-200 ${
-                    navLinks === "/page" && "text-green-800"
+                    location.pathname === "/page" &&
+                    "text-white hover:text-white  rounded  py-1  px-2 bg-green-800"
                   }`}
                   onClick={() => {
                     setOpenMenu(false);
-                    setNavLinks("/page");
                   }}
                 >
                   Page
@@ -102,11 +103,11 @@ const Navbar = () => {
                 <Link
                   to={"/contact"}
                   className={`hover:text-green-700 duration-200 ${
-                    navLinks === "/contact" && "text-green-800"
+                    location.pathname === "/contact" &&
+                    "text-white hover:text-white  rounded  py-1  px-2 bg-green-800"
                   }`}
                   onClick={() => {
                     setOpenMenu(false);
-                    setNavLinks("/contact");
                   }}
                 >
                   Contact

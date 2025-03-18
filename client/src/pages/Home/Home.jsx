@@ -12,17 +12,17 @@ import NewsLetter from "../../components/NewsLetter/NewsLetter";
 const Home = () => {
   return (
     <>
-      <div className="space-y-20 [@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px] mb-20">
-        <div className="hero borderr">
+      <div className="space-y-20 [@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px]">
+        <div className="hero">
           <Slider />
         </div>
         <div className="afterHero">
           <AfterHero />
         </div>
-        <div className="featureProduct borderr">
+        <div className="featureProduct">
           <FeaturedProduct />
         </div>
-        <div className="afterFeaturedProd borderr">
+        <div className="afterFeaturedProd">
           <AfterFeaturedProd />
         </div>
         <div className="imageSection">
