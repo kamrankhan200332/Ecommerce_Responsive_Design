@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="[@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px]">
+    <div className="mt-20 [@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px]">
       <div className=" space-y-20">
         <div className="footer [@media(max-width:680px)]:grid-cols-1 sm:grid-cols-2 grid grid-cols-4 lg:grid-cols-4 justify-between gap-6">
           <div className="contact space-y-6 w-[100%] ">
