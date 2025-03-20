@@ -13,13 +13,13 @@ const Filter_Products = () => {
   const [hoverToShowProdIcon, setHoverToShowProdIcon] = useState(null);
 
   return (
-    <div className="[@media(min-width:480px)_and_(max-width:990px)]:mx-[70px]">
-      <div className="Filter_Products flex gap-8 gap-y-13 [@media(min-width:480px)_and_(max-width:990px)]:flex-col-reverse ">
-        <div className="filter [@media(min-width:480px)_and_(max-width:990px)]:w-full w-[25%] bg-gray-200k space-y-10">
-          <div className="input relative">
+    <div className="">
+      <div className="Filter_Products flex gap-8 gap-y-13 [@media(max-width:990px)]:flex-col-reverse ">
+        <div className="filter [@media(max-width:990px)]:w-full w-[25%] bg-gray-200k space-y-10">
+          <div className="input relative opacity-70">
             <input
               type="text"
-              className="border py-2 px-3 w-full"
+              className="border py-2 px-3 w-full border-gray-300"
               placeholder="Search product..."
             />
             <div className="icon absolute top-3 right-3 text-xl">
@@ -28,27 +28,27 @@ const Filter_Products = () => {
           </div>
           <div className="prod space-y-5">
             <h1 className=" font-semibold">PRODUCTS CATEGORIES</h1>
-            <div className="space-y-10">
+            <div className="space-y-10 opacity-70">
               <div className="filter space-y-4">
                 <div className="flex items-center justify-between">
                   <label htmlFor="">Dried</label>
-                  <span className="px-3 border rounded">6</span>
+                  <span className="px-3 border border-gray-300 rounded">6</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <label htmlFor="">Vegetables</label>
-                  <span className="px-3 border rounded">8</span>
+                  <span className="px-3 border border-gray-300 rounded">8</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <label htmlFor="">Fruits</label>
-                  <span className="px-3 border rounded">9</span>
+                  <span className="px-3 border border-gray-300 rounded">9</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <label htmlFor="">Juice</label>
-                  <span className="px-3 border rounded">6</span>
+                  <span className="px-3 border border-gray-300 rounded">6</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <label htmlFor="">Uncategorized</label>
-                  <span className="px-3 border rounded">1</span>
+                  <span className="px-3 border border-gray-300 rounded">1</span>
                 </div>
               </div>
 
@@ -169,7 +169,7 @@ const Filter_Products = () => {
           </div>
         </div>
 
-        <div className="products w-[75%] [@media(min-width:480px)_and_(max-width:990px)]:w-full  space-y-10">
+        <div className="products w-[75%] [@media(max-width:990px)]:w-full  space-y-10">
           <div className="order flex gap- gap-y-5 justify-between opacity-70 [@media(min-width:480px)_and_(max-width:990px)]:flex-col [@media(min-width:480px)_and_(max-width:990px)]:flex-">
             <div className="flex items-center gap-3">
               <span className="text-2xl border border-gray-400 p-1">
