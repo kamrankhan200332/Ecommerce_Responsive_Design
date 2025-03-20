@@ -8,6 +8,7 @@ import Store from "./pages/Store/Store";
 import Blog from "./pages/Blog/Blog";
 import Page from "./pages/Page/Page";
 import Contact from "./pages/Contact/Contact";
+import SingleStore from "./pages/SingleStore/SingleStore";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/store" exact element={<Store />} />
+            <Route path="/store/single" exact element={<SingleStore />} />
             <Route path="/about" exact element={<About />} />
             <Route path="/blog" exact element={<Blog />} />
             <Route path="/page" exact element={<Page />} />
