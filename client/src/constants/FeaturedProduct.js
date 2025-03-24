@@ -18,6 +18,7 @@ import image6 from "../assets/images/p-logo6.png";
 
 const FeaturedProductData = [
   {
+    id: 1,
     img: img2,
     brand: "Sit Volumptatem",
     price: "68.00$",
@@ -25,49 +26,58 @@ const FeaturedProductData = [
     hot: true,
   },
   {
+    id: 2,
     img: img3,
     brand: "Neque Porro Quisquamest",
     price: "68.00$",
     hot: true,
   },
   {
+    id: 3,
     img: img4,
     brand: "Pellentesque aliquet",
     price: "68.00$",
   },
   {
+    id: 4,
     img: img5,
     brand: "Aspetur Autodit Autfugit",
     price: "68.00$",
   },
   {
+    id: 5,
     img: img6,
     brand: "Sit Volumptatem",
     price: "68.00$",
   },
   {
+    id: 6,
     img: img7,
     brand: "Sint Incidunt Utlabore",
     price: "68.00$",
     sale: true,
   },
   {
+    id: 6,
     img: img8,
     brand: "Aliquam Quaerat Voluptem",
     price: "68.00$",
   },
   {
+    id: 7,
     img: img9,
     brand: "Neque Porro Quisquam",
     price: "68.00$",
     hot: true,
   },
   {
+    id: 8,
     img: img10,
     brand: "Sit Volumptatem",
     price: "68.00$",
   },
   {
+    id: 9,
     img: img11,
     brand: "Aliquam Quaerat Voluptatem",
     price: "68.00$",

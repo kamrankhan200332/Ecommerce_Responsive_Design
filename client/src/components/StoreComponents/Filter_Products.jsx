@@ -8,6 +8,7 @@ import { PiShoppingCartThin } from "react-icons/pi";
 import { PiEyeLight } from "react-icons/pi";
 import { LuArrowRightLeft } from "react-icons/lu";
 import FeaturedProductData from "../../constants/FeaturedProduct";
+import { Link } from "react-router-dom";
 
 const Filter_Products = () => {
   const [hoverToShowProdIcon, setHoverToShowProdIcon] = useState(null);
@@ -199,7 +200,8 @@ const Filter_Products = () => {
           <div className="product">
             <div className="mainBox grid gap-7 [@media(max-width:480px)]:grid-cols-1 [@media(min-width:480px)_and_(max-width:990px)]:grid-cols-2 md:grid-cols-3 xl:grid-cols-3">
               {FeaturedProductData.map((feature, index) => (
-                <div
+                <Link
+                  to={`/store/single/${feature.id}`}
                   key={index}
                   className="box w-[100%] border border-gray-300"
                   onMouseEnter={() => setHoverToShowProdIcon(index)}
@@ -254,7 +256,7 @@ const Filter_Products = () => {
                     </span>
                     <span className="price font-bold">{feature.price}</span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
