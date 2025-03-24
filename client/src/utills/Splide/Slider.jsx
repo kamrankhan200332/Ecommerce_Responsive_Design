@@ -17,7 +17,7 @@ const Slider = () => {
       <Splide
         options={{
           type: "loop", // Enables infinite scrolling
-          perPage: 6, // Shows 6 slides at a time
+          perPage: 6, // Shows 6 slides at a time (default)
           perMove: 1, // Moves 1 slide at a time
           autoplay: true, // Enables autoplay
           interval: 2000, // Time between slides (2s)
@@ -27,6 +27,11 @@ const Slider = () => {
           arrows: false, // Hides navigation arrows
           pagination: false, // Hides pagination dots
           gap: "20px", // Adds space between slides
+          breakpoints: {
+            1024: { perPage: 4 }, // Medium screens (4 slides)
+            768: { perPage: 2 }, // Small screens (2 slides)
+            480: { perPage: 1 }, // Extra small screens (1 slide)
+          },
         }}
         aria-label="React Splide Example"
       >

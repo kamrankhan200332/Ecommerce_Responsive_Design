@@ -44,8 +44,8 @@ const Description = () => {
   ];
 
   return (
-    <div>
-      <p>
+    <div className="space-y-12">
+      <p className="text-justify">
         Aenean id ullamcorper libero. Vestibulum imperdiet nibh. Lorem
         ullamcorper volutpat. Vestibulum lacinia risus. Etiam sagittis
         ullamcorper volutpat. Vestibulum lacinia risus sed ligula malesuada
@@ -59,8 +59,10 @@ const Description = () => {
         quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
         eleifend leo.
       </p>
-      <div className="product">
-        <h1>Related Products</h1>
+      <div className="product space-y-7">
+        <h1 className="text-3xl text-center font-['Playfair_Display'] font-bold">
+          Related Products
+        </h1>
         <div className="product">
           <div className="mainBox grid gap-7 [@media(max-width:480px)]:grid-cols-1 [@media(min-width:480px)_and_(max-width:990px)]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
             {images.map((feature, index) => (

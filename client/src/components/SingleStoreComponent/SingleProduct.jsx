@@ -9,16 +9,18 @@ import { FaLinkedin } from "react-icons/fa";
 const SingleProduct = () => {
   const [counter, setCounter] = useState(1);
   return (
-    <div className=" flex gap-5">
-      <div className="singleImage w-[50%] ">
-        <div className="img">
+    <div className="xl:flex gap-5 space-y-7">
+      <div className="singleImage w-full xl:w-[50%] ">
+        <div className="img w-full">
           <img src={img} alt="singleImage" className="w-full object-cover" />
         </div>
       </div>
 
-      <div className="prodDetails w-[50%] space-y-7">
+      <div className="prodDetails w-full xl:w-[50%] space-y-7">
         <div className="heading space-y-2">
-          <h1 className="text-3xl font-bold">Pellentesque aliquet</h1>
+          <h1 className="text-3xl font-bold font-['Playfair_Display']">
+            Pellentesque aliquet
+          </h1>
           <div className="rating">
             <span>5starts </span>
             <span className="opacity-60">( 5 customer reviews )</span>
@@ -84,7 +86,7 @@ const SingleProduct = () => {
           </div>
         </div>
 
-        <div className="btn flex space-x-4 items-center">
+        <div className="btn space-y-4 md:space-y-0 md:flex-col flex gap-4 items-center">
           <div className="counter text-xl flex rounded-full items-center justify-between border border-gray-400">
             <button
               onClick={() => setCounter(counter > 1 ? counter - 1 : counter)}
@@ -102,7 +104,7 @@ const SingleProduct = () => {
               ➕
             </button>
           </div>
-          <button className="cursor-pointer p-2 py-3 font-bold px-5 text-xl gap-x-3 text-white rounded-full bg-green-500 flex items-center justify-center hover:bg-green-600 ">
+          <button className="cursor-pointer  p-2 py-3 font-bold px-5 text-xl gap-x-3 text-white rounded-full bg-green-500 flex items-center justify-center hover:bg-green-600 ">
             Add To Cart <FaArrowRight />
           </button>
         </div>
