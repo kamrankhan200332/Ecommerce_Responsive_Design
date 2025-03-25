@@ -2,6 +2,10 @@ import React from "react";
 import Hero from "../../components/AboutComponent/Hero";
 import AfterHero from "../../components/AboutComponent/AfterHero";
 import StaffInfo from "../../components/AboutComponent/StaffInfo";
+import AfterStaffInfo from "../../components/AboutComponent/AfterStaffInfo";
+import Delivery from "../../components/AboutComponent/Delivery";
+import Team from "../../components/AboutComponent/Team";
+import NewsLetter from "../../components/NewsLetter/NewsLetter";
 
 const About = () => {
   return (
@@ -14,6 +18,18 @@ const About = () => {
       </div>
       <div>
         <StaffInfo />
+      </div>
+      <div>
+        <AfterStaffInfo />
+      </div>
+      <div>
+        <Delivery />
+      </div>
+      <div>
+        <Team />
+      </div>
+      <div>
+        <NewsLetter />
       </div>
     </div>
   );
