@@ -1,9 +1,12 @@
 import React from 'react';
+import Hero from '../../components/ContactComponent/Hero';
 
 const Contact = () => {
   return (
     <div>
-      Contact
+      <div>
+        <Hero />
+      </div>
     </div>
   );
 }
