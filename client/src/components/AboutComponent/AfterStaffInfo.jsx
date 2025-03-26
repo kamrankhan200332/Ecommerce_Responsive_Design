@@ -107,7 +107,7 @@ const AfterStaffInfo = () => {
         </div>
         <div className="w-full md:w-[50%] space-y-3 flex flex-col justify-center">
           {accordionData.map((accordion) => (
-            <div className="border p-4" key={accordion.id}>
+            <div className="border border-gray-400 p-4" key={accordion.id}>
               <div
                 className="flex items-center justify-between opacity-80 cursor-pointer"
                 onClick={() => handleShow(accordion.id)}
