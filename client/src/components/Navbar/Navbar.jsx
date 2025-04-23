@@ -10,7 +10,7 @@ import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  // const [navLinks, setNavLinks] = useState("/");
+  const [navLinks, setNavLinks] = useState("/");
   const location = useLocation();
 
   return (
