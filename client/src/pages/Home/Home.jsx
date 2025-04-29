@@ -69,6 +69,7 @@ const Home = () => {
         <div className="hero">
           <Slider />
         </div>
+        
         <div className="afterHero">
           <div>
             <div className="main flex flex-col [@media(min-width:991px)]:flex-row">

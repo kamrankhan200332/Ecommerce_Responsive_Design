@@ -9,6 +9,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
+  const isAuthenticated = false;
+  const [showAuthentication, setShowAuthentication] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
   const [navLinks, setNavLinks] = useState("/");
   const location = useLocation();
@@ -126,8 +128,40 @@ const Navbar = () => {
             <div className="cart flex items-center space-x-6">
               <span>
                 <div className="icon cursor-pointer text-xl">
-                  <span className="hover:text-green-700">
+                  <span
+                    className="hover:text-green-700 relative"
+                    onClick={() => setShowAuthentication(!showAuthentication)}
+                  >
                     <IoSearchOutline />
+                    {showAuthentication && (
+                      <div>
+                        {isAuthenticated ? (
+                          <div className="absolute right-0 top-7 w-[100px] borderk h-[100px] flex flex-col space-y-1 z-10">
+                            <Link
+                              to={"/logout"}
+                              className="bg-red-700 text-white font-medium py-1 text-center hover:bg-red-800 rounded cursor-pointer"
+                            >
+                              Log Out
+                            </Link>
+                          </div>
+                        ) : (
+                          <div className="absolute right-0 top-7 w-[100px] borderk h-[100px] flex flex-col space-y-1 z-10">
+                            <Link
+                              to={"/signup"}
+                              className="bg-blue-700 text-white font-medium py-1 text-center hover:bg-blue-800 rounded cursor-pointer"
+                            >
+                              Sign Up
+                            </Link>
+                            <Link
+                              to={"/login"}
+                              className="bg-blue-700 text-white font-medium py-1 text-center hover:bg-blue-800 rounded cursor-pointer"
+                            >
+                              Log In
+                            </Link>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </span>
                 </div>
               </span>

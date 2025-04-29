@@ -9,8 +9,12 @@ import Blog from "./pages/Blog/Blog";
 import Page from "./pages/Page/Page";
 import Contact from "./pages/Contact/Contact";
 import SingleStore from "./pages/SingleStore/SingleStore";
+import Signup from "./pages/SignUp/Signup";
+import Login from "./pages/Login/Login";
+import Protected from "./components/Protected/Protected";
 
 const App = () => {
+  const isAuth = false;
   return (
     <div>
       <BrowserRouter>
@@ -18,12 +22,30 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" exact element={<Home />} />
-            <Route path="/store" exact element={<Store />} />
+            <Route
+              path="/store"
+              exact
+              element={
+                <Protected isAuth={isAuth}>
+                  <Store />
+                </Protected>
+              }
+            />
             <Route path="/store/single/:id" exact element={<SingleStore />} />
             <Route path="/about" exact element={<About />} />
-            <Route path="/blog" exact element={<Blog />} />
+            <Route
+              path="/blog"
+              exact
+              element={
+                <Protected isAuth={isAuth}>
+                  <Blog />
+                </Protected>
+              }
+            />
             <Route path="/page" exact element={<Page />} />
             <Route path="/contact" exact element={<Contact />} />
+            <Route path="/signup" exact element={<Signup />} />
+            <Route path="/login" exact element={<Login />} />
           </Routes>
           <Footer />
         </div>
