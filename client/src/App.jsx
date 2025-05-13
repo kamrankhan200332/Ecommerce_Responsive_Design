@@ -12,9 +12,10 @@ import SingleStore from "./pages/SingleStore/SingleStore";
 import Signup from "./pages/SignUp/Signup";
 import Login from "./pages/Login/Login";
 import Protected from "./components/Protected/Protected";
+import Error from "./pages/Error/Error";
 
 const App = () => {
-  const isAuth = false;
+  const isAuth = true;
   return (
     <div>
       <BrowserRouter>
@@ -46,6 +47,7 @@ const App = () => {
             <Route path="/contact" exact element={<Contact />} />
             <Route path="/signup" exact element={<Signup />} />
             <Route path="/login" exact element={<Login />} />
+            <Route path="/*" exact element={<Error />} />
           </Routes>
           <Footer />
         </div>

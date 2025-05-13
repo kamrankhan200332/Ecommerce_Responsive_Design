@@ -1,6 +1,8 @@
-import Hero from "../../components/StoreComponents/Hero";
-
 import React, { useState } from "react";
+
+import img2 from "../../assets/images/storeImages/img1.jpg";
+import { Link } from "react-router-dom";
+
 import { IoIosSearch } from "react-icons/io";
 import img from "../../assets/images/storeImages/img41.jpg";
 import { FaBorderAll } from "react-icons/fa";
@@ -10,7 +12,6 @@ import { PiShoppingCartThin } from "react-icons/pi";
 import { PiEyeLight } from "react-icons/pi";
 import { LuArrowRightLeft } from "react-icons/lu";
 import FeaturedProductData from "../../constants/FeaturedProduct";
-import { Link } from "react-router-dom";
 
 import img1 from "../../assets/images/storeImages/clean.jpg";
 
@@ -18,11 +19,27 @@ import lineRose from "../../assets/images/lineRose.png";
 import { FaArrowRight } from "react-icons/fa6";
 
 const Store = () => {
+  const [price, setPrice] = useState(399);
   const [hoverToShowProdIcon, setHoverToShowProdIcon] = useState(null);
   return (
     <div className="space-y-20 [@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px]">
       <div className="hero">
-        <Hero />
+        <div className="image h-[60vh] bg-gray-100 mb-20 py-10 relative">
+          <img src={img2} className="w-full h-full object-cover" alt="" />
+          <div className="shop absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex items-center justify-center flex-col space-y-2">
+            <h1 className="font-['Playfair_Display'] font-bold text-4xl">
+              Shop
+            </h1>
+            <p className="text-xl">
+              <Link to={"/"}>
+                <span className="hover:text-green-600 cursor-pointer">
+                  Home{" "}
+                </span>
+              </Link>
+              / <span className="text-green-600">Shop</span>
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="filter_products [@media(min-width:480px)_and_(max-width:990px)]:mx-[70px]">
@@ -78,12 +95,21 @@ const Store = () => {
                   <div className="space-y-5">
                     <h1 className="font-bold">FILTER BY PRICE</h1>
                     <div className="space-y-3">
-                      <div className="range">rang</div>
+                      <div className="range">
+                        <input
+                          type="range"
+                          min={100}
+                          max={10000}
+                          value={price}
+                          onChange={(e) => setPrice(e.target.value)}
+                        />
+                      </div>
                       <div className="btn flex items-center justify-between">
-                        <button className="bg-green-700 text-white py-1 px-4 font-semibold rounded-full flex items-center justify-center">
+                        <button className="bg-green-700 text-white hover:bg-green-800 py-1 px-4 font-semibold rounded-full flex items-center justify-center cursor-pointer">
                           FILTER
                         </button>
-                        <span>Price: $0 - $50</span>
+                        {/* <span>Price: $0 - $50</span> */}
+                        <span>Price: ${price}</span>
                       </div>
                     </div>
                   </div>

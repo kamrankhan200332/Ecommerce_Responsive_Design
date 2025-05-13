@@ -1,8 +1,11 @@
-import Hero from "../../components/SingleStoreComponent/Hero";
+import React, { useState } from "react";
+
+import img1 from "../../assets/images/storeImages/img1.jpg";
+import { Link } from "react-router-dom";
+
 import Slider from "../../utills/Splide/Slider";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
 
-import React, { useState } from "react";
 import img from "../../assets/images/storeImages/img45.jpg";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
@@ -11,7 +14,6 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
-import { Link } from "react-router-dom";
 import Description from "../../components/SingleStoreComponent/Description";
 import Review from "../../components/SingleStoreComponent/Review";
 
@@ -25,7 +27,28 @@ const SingleStore = () => {
   return (
     <div className="px-[70px]k space-y-10k space-y-20 [@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px]">
       <div>
-        <Hero />
+        <div className="image h-[60vh] bg-gray-100 py-10 relative">
+          <img src={img1} className="w-full h-full object-cover" alt="" />
+          <div className="shop absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex items-center justify-center flex-col space-y-2">
+            <h1 className="font-['Playfair_Display'] font-bold text-4xl">
+              Shop
+            </h1>
+            <p className="text-xl">
+              <Link to={"/"}>
+                <span className="hover:text-green-600 cursor-pointer">
+                  Home{" "}
+                </span>
+              </Link>
+              /{" "}
+              <Link to={"/store"}>
+                <span className="hover:text-green-600 cursor-pointer">
+                  Shop{" "}
+                </span>
+              </Link>{" "}
+              / <span className="text-green-600">Pellentesque aliquet</span>
+            </p>
+          </div>
+        </div>
       </div>
 
       <div>

@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
+import { PiUserCircleLight } from "react-icons/pi";
+import { FaRegUserCircle } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -16,9 +18,9 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div>
+    <div className=" sticky top-0 left-0 z-50">
       <header className="bg-gray-200 py-2">
-        <nav className="flex justify-between items-center w-[90%] mx-auto h-[80px]">
+        <nav className="flex justify-between items-center w-[90%] mx-auto h-[80px] ">
           <Link to={"/"} onClick={() => setNavLinks("/")}>
             <div className="logo">
               <img src={logo} alt="" />
@@ -132,7 +134,7 @@ const Navbar = () => {
                     className="hover:text-green-700 relative"
                     onClick={() => setShowAuthentication(!showAuthentication)}
                   >
-                    <IoSearchOutline />
+                    <PiUserCircleLight />
                     {showAuthentication && (
                       <div>
                         {isAuthenticated ? (

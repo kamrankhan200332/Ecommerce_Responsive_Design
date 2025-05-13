@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "../../components/ContactComponent/Hero";
-
+import img1 from "../../assets/images/storeImages/img1.jpg";
+import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHeadphones } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -9,7 +9,24 @@ const Contact = () => {
   return (
     <div className="space-y-20 [@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px]">
       <div>
-        <Hero />
+        <div>
+          <div className="image h-[60vh] bg-gray-100 mb-20 py-10 relative">
+            <img src={img1} className="w-full h-full object-cover" alt="" />
+            <div className="shop absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex items-center justify-center flex-col space-y-2">
+              <h1 className="font-['Playfair_Display'] font-bold text-4xl">
+                Contact
+              </h1>
+              <p className="text-xl">
+                <Link to={"/"}>
+                  <span className="hover:text-green-600 cursor-pointer">
+                    Home{" "}
+                  </span>
+                </Link>
+                / <span className="text-green-600">Contact</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div>

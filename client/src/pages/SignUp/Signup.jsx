@@ -1,8 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import TextInput from "../../components/TextInput/TextInput";
+import { useFormik } from "formik";
+import SignupSchema from "../../Schemas/SignupSchema";
 
 const Signup = () => {
   const navigate = useNavigate();
+
+  const { values, touched, handleBlur, handleChange, errors } = useFormik({
+    initialValues: {
+      name: "",
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+    validationSchema: SignupSchema,
+  });
   return (
     <div className="flex items-center justify-center py-5 flex-col m-auto space-y-10 ">
       <h1 className="text-3xl font-semibold font-['Playfair_Display'] ">
@@ -10,30 +24,57 @@ const Signup = () => {
       </h1>
       <div className="space-y-7 w-[35%]">
         <div className="w-full space-y-3">
-          <input
+          <TextInput
             type="text"
-            className="border outline-none rounded py-2 px-3 w-full text-xl"
-            placeholder="name... "
+            placeholder="name..."
+            value={values.name}
+            name="name"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            error={errors.name && touched.name ? 1 : undefined}
+            errormessage={errors.name}
           />
-          <input
+          <TextInput
             type="text"
-            className="border outline-none rounded py-2 px-3 w-full text-xl"
             placeholder="username... "
+            value={values.username}
+            name="username"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            error={errors.username && touched.username ? 1 : undefined}
+            errormessage={errors.username}
           />
-          <input
+          <TextInput
             type="email"
-            className="border outline-none rounded py-2 px-3 w-full text-xl"
             placeholder="email... "
+            value={values.email}
+            name="email"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            error={errors.email && touched.email ? 1 : undefined}
+            errormessage={errors.email}
           />
-          <input
+          <TextInput
             type="password"
-            className="border outline-none rounded py-2 px-3 w-full text-xl"
             placeholder="password... "
+            value={values.password}
+            name="password"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            error={errors.password && touched.password ? 1 : undefined}
+            errormessage={errors.password}
           />
-          <input
+          <TextInput
             type="password"
-            className="border outline-none rounded py-2 px-3 w-full text-xl"
             placeholder="confirmPassword... "
+            value={values.confirmPassword}
+            name="confirmPassword"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            error={
+              errors.confirmPassword && touched.confirmPassword ? 1 : undefined
+            }
+            errormessage={errors.confirmPassword}
           />
         </div>
         <div className="btn w-full">
