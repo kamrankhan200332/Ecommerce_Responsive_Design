@@ -51,7 +51,7 @@ const Navbar = () => {
                   to={"/store"}
                   className={`hover:text-green-700 duration-200 ${
                     location.pathname === "/store" &&
-                    "text-white hover:text-white  rounded  py-1  px-2 bg-green-800"
+                    "text-white hover:text-white rounded py-1  px-2 bg-green-800"
                   }`}
                   onClick={() => {
                     setOpenMenu(false);
