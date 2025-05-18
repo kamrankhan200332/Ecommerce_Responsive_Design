@@ -28,7 +28,7 @@ const Navbar = () => {
           </Link>
           <div
             className={`absolute md:static bg-gray-200 z-10 left-0 w-full min-h-[50vh] md:min-h-fit md:w-auto ${
-              openMenu ? "top-[19%]" : "-top-full"
+              openMenu ? "top-[100%]" : "-top-[350%]"
             } transition-all duration-500 ease-in-out`}
           >
             <ul className="flex flex-col md:flex-row px-9 md:items-center gap-6 pt-3 md:pt-0 font-semibold mt-3 uppercase">
