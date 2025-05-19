@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Slider from "../../utills/Swiper/Slider";
-import Page from "../Page/Page";
 // import AfterHero from "../../components/AfterHero/AfterHero";
 import img1 from "../../assets/images/img1.jpg";
 import gamla1 from "../../assets/images/gamla1.png";
@@ -34,42 +33,43 @@ import { Autoplay } from "swiper/modules";
 import { featureImages } from "../../constants/FeaturedProduct";
 
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [hoverToShowProdIcon, setHoverToShowProdIcon] = useState(null);
 
-   const [timeLeft, setTimeLeft] = useState({
-     hours: 0,
-     minutes: 0,
-     seconds: 0,
-   });
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
-   useEffect(() => {
-     const timer = setInterval(() => {
-       setTimeLeft((prevTime) => {
-         let { hours, minutes, seconds } = prevTime;
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => {
+        let { hours, minutes, seconds } = prevTime;
 
-         if (seconds === 59) {
-           if (minutes === 59) {
-             return { hours: hours + 1, minutes: 0, seconds: 0 };
-           } else {
-             return { hours, minutes: minutes + 1, seconds: 0 };
-           }
-         } else {
-           return { hours, minutes, seconds: seconds + 1 };
-         }
-       });
-     }, 1000);
+        if (seconds === 59) {
+          if (minutes === 59) {
+            return { hours: hours + 1, minutes: 0, seconds: 0 };
+          } else {
+            return { hours, minutes: minutes + 1, seconds: 0 };
+          }
+        } else {
+          return { hours, minutes, seconds: seconds + 1 };
+        }
+      });
+    }, 1000);
 
-     return () => clearInterval(timer);
-   }, []);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <>
       <div className="space-y-20 [@media(max-width:576px)]:px-[15px] px-[50px] md:px-[60px] lg:px-[70px]">
         <div className="hero">
           <Slider />
         </div>
-        
+
         <div className="afterHero">
           <div>
             <div className="main flex flex-col [@media(min-width:991px)]:flex-row">
@@ -157,7 +157,9 @@ const Home = () => {
 
             <div className="mainBox grid gap-7 [@media(max-width:480px)]:grid-cols-1 [@media(min-width:480px)_and_(max-width:990px)]:grid-cols-2 md:grid-cols-4 xl:grid-cols-5">
               {FeaturedProductData.map((feature, index) => (
-                <div
+                <Link
+                  to={`/store/single/${feature.id}`}
+                  state={feature}
                   key={index}
                   className="box w-[100%] border border-gray-300"
                   onMouseEnter={() => setHoverToShowProdIcon(index)}
@@ -212,7 +214,7 @@ const Home = () => {
                     </span>
                     <span className="price font-bold">{feature.price}</span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

@@ -21,7 +21,7 @@ const SingleStore = () => {
   const [counter, setCounter] = useState(1);
   const location = useLocation();
   const prod = location.state;
-
+  console.log(prod);
   const [description, setDescription] = useState(true);
   const [review, setReview] = useState(false);
   return (
@@ -45,7 +45,7 @@ const SingleStore = () => {
                   Shop{" "}
                 </span>
               </Link>{" "}
-              / <span className="text-green-600">Pellentesque aliquet</span>
+              / <span className="text-green-600">{prod.brand}</span>
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ const SingleStore = () => {
           <div className="singleImage w-full xl:w-[50%] ">
             <div className="img w-full">
               <img
-                src={img}
+                src={prod.img}
                 alt="singleImage"
                 className="w-full object-cover"
               />
@@ -66,14 +66,14 @@ const SingleStore = () => {
           <div className="prodDetails w-full xl:w-[50%] space-y-7">
             <div className="heading space-y-2">
               <h1 className="text-3xl font-bold font-['Playfair_Display']">
-                Pellentesque aliquet
+                {prod.brand}
               </h1>
               <div className="rating">
                 <span>5starts </span>
                 <span className="opacity-60">( 5 customer reviews )</span>
               </div>
               <span className="price text-2xl text-green-700 font-semibold">
-                65.00$
+                {prod.price}
               </span>
             </div>
 
